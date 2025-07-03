@@ -1,6 +1,7 @@
 import argparse
 import logging
 
+import visualize
 from ramwich import RAMwich
 
 # Configure logging
@@ -20,7 +21,8 @@ def main():
     simulator.run(activation=args.activation)
 
     # Get statistics and pass to visualization
-    # stats = simulator.get_stats()
+    stats = simulator.get_stats()
+    visualize.visualize_stats(stats)
     # summarize_results(stats)
 
 
