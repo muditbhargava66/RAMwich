@@ -63,6 +63,8 @@ def visualize_area(area_data):
 
     plt.title("Area Distribution of RAMwich Components")
     plt.tight_layout()
+    import os
+    os.makedirs("./figures", exist_ok=True)
     plt.savefig("./figures/area_pie.png")
 
     sorted_items = sorted(area_data.items(), key=lambda x: x[1], reverse=True)
